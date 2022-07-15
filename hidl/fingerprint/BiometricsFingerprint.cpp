@@ -104,6 +104,7 @@ Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, floa
 
 Return<void> BiometricsFingerprint::onFingerUp() {
     set(NOTIFY_PRESS_PATH, 0);
+    mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 0);
 
     return Void();
 }
